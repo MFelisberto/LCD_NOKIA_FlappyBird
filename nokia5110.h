@@ -52,8 +52,34 @@ void nokia_lcd_clear(void);
 void nokia_lcd_power(uint8_t on);
 
 /**
+ * Desenha uma linha
+ * @x1: coord. x do ponto 1
+ * @y1: coord. y do ponto 1
+ * @x2: coord. x do ponto 2
+ * @y2: coord. y do ponto 2
+ */
+void nokia_lcd_drawline(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2);
+
+/**
+ * Desenha um retângulo
+ * @x1: coord. x de um dos cantos
+ * @y1: coord. y de um dos cantos
+ * @x2: coord. x do outro canto
+ * @y2: coord. y do outro canto
+ */
+void nokia_lcd_drawrect(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2);
+
+/**
+ * Desenha um círculo
+ * @x: coord. x do centro
+ * @y: coord. y do centro
+ * @r: raio em pixels
+ */
+void nokia_lcd_drawcircle(uint8_t x, uint8_t y, uint8_t r);
+
+/**
  * Set single pixel
- * @x: horizontal pozition
+ * @x: horizontal position
  * @y: vertical position
  * @value: show/hide pixel
  */
@@ -88,6 +114,6 @@ void nokia_lcd_render(void);
 /*
  * Define custom char (ASCII 0-31)
  */
-void nokia_lcd_custom(char code, uint8_t* glyph);
+void nokia_lcd_custom(char code, uint8_t *glyph);
 
 #endif
