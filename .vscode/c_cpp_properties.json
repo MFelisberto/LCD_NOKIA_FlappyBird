@@ -1,33 +1,28 @@
 {
     "configurations": [
         {
-            "name": "Win32",
+            "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**"
             ],
-            "defines": [
-                "_DEBUG",
-                "UNICODE",
-                "_UNICODE"
-            ],
-            "compilerPath": "C:\\MinGW\\bin\\gcc.exe",
+            "defines": [],
+            "compilerPath": "/usr/bin/clang-7",
             "cStandard": "c11",
-            "intelliSenseMode": "windows-msvc-x64"
+            "cppStandard": "c++14",
+            "intelliSenseMode": "linux-clang-x64"
         },
         {
             "name": "AVR",
             "includePath": [
                 "${workspaceFolder}/**",
-                "C:\\avr-gcc-11.1.0-x64-windows\\avr\\include"
+                "/usr/lib/avr/include"
             ],
             "defines": [
-                "_DEBUG",
-                "UNICODE",
-                "_UNICODE",
-                "(__AVR_ATmega328P__)"
+                "__AVR_ATmega328P__"
             ],
-            "compilerPath": "C:\\avr-gcc-11.1.0-x64-windows\\bin\\avr-gcc.exe",
+            "compilerPath": "/usr/bin/avr-gcc",
             "cStandard": "c99",
+            "cppStandard": "c++14",
             "intelliSenseMode": "gcc-x64"
         }
     ],

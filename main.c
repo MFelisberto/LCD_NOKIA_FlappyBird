@@ -22,23 +22,39 @@ volatile int selecionado = 1; // -> para selecao no menu
 volatile int morreu = 0;      // -> para controlar loop de reinicio do jogo e se o personagem morreu
 int primeira = 1;             // -> para gerar os canos desde o "inicio" da tela
 int delayCano = 1;            // -> pro delay inicial do jogo, para ter um "tempo" para o jogador
+int contadorCentesimoDezena;  // -> pro score
+int contadorCentesimoUnidade; // -> pro score
 
 // glyph para a seleção do menu
 uint8_t glyph[] =  {0b00111110,0b00111110,0b00011100,0b00011100,0b00001000};
+
+// pro score
+uint8_t chars[][5]  = {
+    { 0x3e, 0x51, 0x49, 0x45, 0x3e }, // 30 0
+    { 0x00, 0x42, 0x7f, 0x40, 0x00 }, // 31 1
+    { 0x42, 0x61, 0x51, 0x49, 0x46 }, // 32 2
+    { 0x21, 0x41, 0x45, 0x4b, 0x31 }, // 33 3
+    { 0x18, 0x14, 0x12, 0x7f, 0x10 }, // 34 4
+    { 0x27, 0x45, 0x45, 0x45, 0x39 }, // 35 5
+    { 0x3c, 0x4a, 0x49, 0x49, 0x30 }, // 36 6
+    { 0x01, 0x71, 0x09, 0x05, 0x03 }, // 37 7
+    { 0x36, 0x49, 0x49, 0x49, 0x36 }, // 38 8
+    { 0x06, 0x49, 0x49, 0x29, 0x1e }  // 39 9
+};
 
 
 // struc para os canos
 typedef struct{
     int x;   // usamos para mover o cano pela tela
-    int y1;  // parte de cima do cano
+    int y1;  // parte dent8_t glyph[] =  {0b00111110,0b00111110,0b00011100,0b00011100,0b00001000}; cima do cano
     int y2;  // parte de cima de cano
     int y11; // parte de baixo do cano
     int y22; // parte de baixo do cano
 } Cano; 
 
 // canos que serao utilizados
-Cano cano1 = {83, 1, 16, 32, 47};
-Cano cano2 = {83, 1, 16, 32, 47};
+Cano cano1 = {81, 1, 16, 32, 47};
+Cano cano2 = {81, 1, 16, 32, 47};
 
 // para o passaro
 int yc = 24;
@@ -58,7 +74,29 @@ void timer_init() {
 
 // geracao de movimentacao de canos, alem de ifs para a derrota do jogador
 ISR(TIMER1_COMPA_vect){
-    if(telaAtual == 1){
+    if(telaAtual == 1 && !morreu){
+        
+        if(xc - 4 == cano1.x){
+            contadorCentesimoUnidade++;
+            if(contadorCentesimoUnidade>9){
+                contadorCentesimoDezena++;
+                if(contadorCentesimoDezena>9){
+                    contadorCentesimoDezena = 0;
+                }
+                contadorCentesimoUnidade = 0;
+            }
+        }
+
+        if(xc - 4 == cano2.x){
+            contadorCentesimoUnidade++;
+            if(contadorCentesimoUnidade>9){
+                contadorCentesimoDezena++;
+                if(contadorCentesimoDezena>9){
+                    contadorCentesimoDezena = 0;
+                }
+                contadorCentesimoUnidade = 0;
+            }
+        }
         
         if((yc <= cano1.y2 && xc == cano1.x) || (yc >= cano1.y11 && xc == cano1.x) || (yc <= cano2.y2 && xc == cano2.x) || (yc >= cano2.y11 && xc == cano2.x)){
             morreu = 1;
@@ -74,23 +112,23 @@ ISR(TIMER1_COMPA_vect){
             
             if(cano1.x == 43){
                 primeira = 0;
-                cano2.x = 83;
+                cano2.x = 81;
                 if(select % 2 == 0){
                     cano2.y2 =  rand() % 32 + 2;
                     cano2.y11 =  cano2.y2 + 10;
                 }else{
-                    cano2.y11 =  rand() % 16 + 2;
+                    cano2.y11 =  rand() % 5 + 13;
                     cano2.y2 = cano2.y11 - 10;
                 }
             }
             
             if(cano2.x == 43){
-                cano1.x = 83;
+                cano1.x = 81;
                 if(select % 2 != 0){
                     cano1.y2 =  rand() % 32 + 2;
                     cano1.y11 =  cano1.y2+ 10;
                 }else{
-                    cano1.y11 =  rand() % 16 + 2;
+                    cano1.y11 = rand() % 5 + 13;
                     cano1.y2 =  cano1.y11 - 10;
                 }
             }
@@ -117,18 +155,18 @@ void lcd_atualizar(int tela) {
             nokia_lcd_set_cursor(20, 20);
             
             if(selecionado == 1){
-                nokia_lcd_write_string("\001Iniciar",1);
+                nokia_lcd_write_string("\005Iniciar",1);
                 nokia_lcd_set_cursor(20, 30);
                 nokia_lcd_write_string("\tSair",1);
                 nokia_lcd_set_cursor(1, 40);
-                nokia_lcd_write_string("99",1);
+                nokia_lcd_write_string("",1);
             }
             else if(selecionado == 2){// Normal
                 nokia_lcd_write_string("\tIniciar",1);
                 nokia_lcd_set_cursor(20, 30);
-                nokia_lcd_write_string("\001Sair",1);
+                nokia_lcd_write_string("\005Sair",1);
                 nokia_lcd_set_cursor(1, 40);
-                nokia_lcd_write_string("99",1);
+                nokia_lcd_write_string("",1);
             }
            
         break;
@@ -138,19 +176,22 @@ void lcd_atualizar(int tela) {
             if(!morreu){
                 
                 // grama
-                nokia_lcd_drawrect(1, 47, 83, 47);
+                nokia_lcd_drawrect(8, 47, 81, 47);
                 // teto
-                nokia_lcd_drawrect(1, 0, 83, 0);
+                nokia_lcd_drawrect(8, 0, 81, 0);
 
                 if(delayCano>45){
                     if(primeira && cano1.x >43){
-                        nokia_lcd_drawrect(cano1.x, cano1.y1, cano1.x + 2, cano1.y2);
-                        nokia_lcd_drawrect(cano1.x, cano1.y11, cano1.x + 2, cano1.y22);
+                        nokia_lcd_drawrect(cano1.x+2, cano1.y1, cano1.x, cano1.y2);
+                        nokia_lcd_drawrect(cano1.x+2, cano1.y11, cano1.x, cano1.y22);
                     }else{
-                        nokia_lcd_drawrect(cano1.x, cano1.y1, cano1.x + 2, cano1.y2);
-                        nokia_lcd_drawrect(cano1.x, cano1.y11, cano1.x + 2, cano1.y22);
-                        nokia_lcd_drawrect(cano2.x, cano2.y1, cano2.x + 2, cano2.y2);
-                        nokia_lcd_drawrect(cano2.x, cano2.y11, cano2.x + 2, cano2.y22);
+                        nokia_lcd_drawrect(cano1.x+2, cano1.y1, cano1.x, cano1.y2);
+                        nokia_lcd_drawrect(cano1.x+2, cano1.y11, cano1.x, cano1.y22);
+                        nokia_lcd_drawrect(cano2.x+2, cano2.y1, cano2.x, cano2.y2);
+                        nokia_lcd_drawrect(cano2.x+2, cano2.y11, cano2.x, cano2.y22);
+                        nokia_lcd_custom(2,chars[contadorCentesimoUnidade]);
+                        nokia_lcd_custom(1,chars[contadorCentesimoDezena]);
+                        nokia_lcd_write_string("\001\002", 1);
                     }
                 }
                 
@@ -159,10 +200,24 @@ void lcd_atualizar(int tela) {
             }else{
                 _delay_ms(500); 
                 nokia_lcd_set_cursor(10, 2);
-                nokia_lcd_write_string("Fim de jogo!",1);
+                nokia_lcd_write_string("GAME OVER!",1);
                 nokia_lcd_set_cursor(10, 15);
-                nokia_lcd_write_string("Score: ",1);
-                nokia_lcd_write_string("score",1);
+                nokia_lcd_custom(2,chars[contadorCentesimoUnidade]);
+                nokia_lcd_custom(1,chars[contadorCentesimoDezena]);
+                nokia_lcd_write_string("SCORE: \001\002", 1);
+                nokia_lcd_render();
+                _delay_ms(1500);
+
+                // qualquer coisa tira
+                telaAtual = 0;
+                selecionado = 1;
+                morreu = 0;
+                primeira = 1;
+                cano1.x = 81;
+                cano2.x = 81;
+                yc = 24;
+                contadorCentesimoDezena = 0;
+                contadorCentesimoUnidade = 0;
             }
         
         break;
@@ -192,7 +247,7 @@ int main(void){
     cli();
     nokia_lcd_init();
     nokia_lcd_clear();
-    nokia_lcd_custom(1, glyph);
+    nokia_lcd_custom(5, glyph);
     
     timer_init();
     sei();

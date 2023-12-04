@@ -271,7 +271,9 @@ void nokia_lcd_drawrect(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2)
     nokia_lcd_drawline(x1, y2, x1, y1);
 }
 
-
+// Desenha um círculo
+// Algoritmo do ponto médio
+// https://www.geeksforgeeks.org/mid-point-circle-drawing-algorithm/
 void nokia_lcd_drawcircle(uint8_t x0, uint8_t y0, uint8_t r)
 {
     int x = r;
@@ -300,5 +302,4 @@ void nokia_lcd_drawcircle(uint8_t x0, uint8_t y0, uint8_t r)
             err -= 2 * x + 1;
         }
     }
-
 }

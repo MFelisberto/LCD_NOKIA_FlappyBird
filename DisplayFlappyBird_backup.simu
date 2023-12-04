@@ -1,0 +1,83 @@
+<circuit type="simulide_0.4" Speed_per="100" Speed_sps="1000000" noLinAcc="5" Simu_Step_nS="1000" animate="0" reactStep="50">
+
+Unique  Id: Ground-177: 
+Circuit Id: Ground-177
+<item mainComp="false" labely="8" id="Ground-177" valLabRot="0" x="-264" itemtype="Ground" rotation="0" boardPos="-1e+06,-1e+06" y="-148" objectName="Ground-177" valLabelx="0" Show_id="false" labelrot="0" vflip="1" valLabely="0" circRot="-5.486129280331905e+303" hflip="1" labelx="-16" boardRot="-1e+06" circPos="0,0"/>
+
+Unique  Id: Ground-175: 
+Circuit Id: Ground-175
+<item mainComp="false" labely="8" id="Ground-175" valLabRot="0" x="-108" itemtype="Ground" rotation="0" boardPos="-1e+06,-1e+06" y="-272" objectName="Ground-175" valLabelx="0" Show_id="false" labelrot="0" vflip="1" valLabely="0" circRot="-5.486129293930126e+303" hflip="1" labelx="-16" boardRot="-1e+06" circPos="0,0"/>
+
+Unique  Id: TextComponent-125: 
+Circuit Id: TextComponent-84
+<item mainComp="false" Text="Cima&#xa;baixo&#xa;selecionar" labely="-24" id="TextComponent-84" valLabRot="0" Font="Helvetica [Cronyx]" x="-344" itemtype="TextComponent" rotation="0" boardPos="-1e+06,-1e+06" Opacity="1" Border="1" y="-244" objectName="TextComponent-125" valLabelx="0" Fixed_Width="false" Show_id="false" labelrot="0" vflip="1" Margin="2" Font_Size="10" valLabely="0" circRot="nan" hflip="1" labelx="-16" boardRot="-1e+06" circPos="0,0"/>
+
+Unique  Id: TextComponent-84: 
+Circuit Id: TextComponent-84
+<item mainComp="false" Text="Score ->" labely="-24" id="TextComponent-84" valLabRot="0" Font="Helvetica [Cronyx]" x="-72" itemtype="TextComponent" rotation="0" boardPos="-1e+06,-1e+06" Opacity="1" Border="1" y="-268" objectName="TextComponent-84" valLabelx="0" Fixed_Width="false" Show_id="false" labelrot="0" vflip="1" Margin="2" Font_Size="10" valLabely="0" circRot="nan" hflip="1" labelx="-16" boardRot="-1e+06" circPos="0,0"/>
+
+Unique  Id: KeyPad-52: 
+Circuit Id: KeyPad-52
+<item mainComp="false" labely="-16" id="KeyPad-52" valLabRot="0" Rows="1" Cols="1" Key_Labels=" " x="-140" itemtype="KeyPad" rotation="0" boardPos="-1e+06,-1e+06" y="-304" objectName="KeyPad-52" valLabelx="0" Show_id="false" labelrot="0" vflip="1" valLabely="0" circRot="1.086461845227e-311" hflip="1" labelx="-8" boardRot="-1e+06" circPos="0,0"/>
+
+Unique  Id: atmega328-8: 
+Circuit Id: atmega328-8
+<item mainComp="false" Logic_Symbol="false" labely="-20" id="atmega328-8" Name="" valLabRot="0" Program="code.hex" eeprom="255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255,255" x="-200" itemtype="AVR" rotation="0" varList=",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,," boardPos="-1e+06,-1e+06" Auto_Load="false" y="-256" objectName="atmega328-8" valLabelx="0" Show_id="true" labelrot="0" vflip="1" valLabely="0" circRot="3.0157390663e-314" hflip="1" labelx="0" Mhz="16" boardRot="-1e+06" circPos="0,0"/>
+
+Unique  Id: Pcd8544-23: 
+Circuit Id: Pcd8544-23
+<item mainComp="false" labely="-66" id="Pcd8544-23" valLabRot="0" x="40" itemtype="Pcd8544" rotation="0" boardPos="-1e+06,-1e+06" y="-220" objectName="Pcd8544-23" valLabelx="0" Show_id="true" labelrot="0" vflip="1" valLabely="0" circRot="3.0157390663e-314" hflip="1" labelx="-32" boardRot="-1e+06" circPos="0,0"/>
+
+Unique  Id: KeyPad-97: 
+Circuit Id: KeyPad-52
+<item mainComp="false" labely="-16" id="KeyPad-52" valLabRot="0" Rows="3" Cols="1" Key_Labels="wsd" x="-264" itemtype="KeyPad" rotation="0" boardPos="-1e+06,-1e+06" y="-244" objectName="KeyPad-97" valLabelx="0" Show_id="false" labelrot="0" vflip="1" valLabely="0" circRot="1.086461845227e-311" hflip="1" labelx="-8" boardRot="-1e+06" circPos="0,0"/>
+
+Unique  Id: TextComponent-163: 
+Circuit Id: TextComponent-84
+<item mainComp="false" Text="Voar" labely="-24" id="TextComponent-84" valLabRot="0" Font="Helvetica [Cronyx]" x="-188" itemtype="TextComponent" rotation="0" boardPos="-1e+06,-1e+06" Opacity="1" Border="1" y="-304" objectName="TextComponent-163" valLabelx="0" Fixed_Width="false" Show_id="false" labelrot="0" vflip="1" Margin="2" Font_Size="10" valLabely="0" circRot="nan" hflip="1" labelx="-16" boardRot="-1e+06" circPos="0,0"/>
+
+Unique  Id: Connector-45: 
+Circuit Id: Connector-45
+<item mainComp="false" labely="-24" id="Connector-45" valLabRot="0" x="-160" itemtype="Connector" rotation="0" boardPos="-1e+06,-1e+06" y="-144" objectName="Connector-45" valLabelx="0" endpinid="Pcd8544-23-PinCs" Show_id="false" labelrot="0" pointList="-160,-144,24,-144,24,-180" enodeid="Circ_eNode-178" vflip="1" valLabely="0" circRot="0" hflip="1" startpinid="atmega328-8-PB1" labelx="-16" boardRot="-1e+06" circPos="0,0"/>
+
+Unique  Id: Connector-46: 
+Circuit Id: Connector-46
+<item mainComp="false" labely="-24" id="Connector-46" valLabRot="0" x="-160" itemtype="Connector" rotation="0" boardPos="-1e+06,-1e+06" y="-152" objectName="Connector-46" valLabelx="0" endpinid="Pcd8544-23-PinRst" Show_id="false" labelrot="0" pointList="-160,-152,8,-152,8,-180" enodeid="Circ_eNode-179" vflip="1" valLabely="0" circRot="0" hflip="1" startpinid="atmega328-8-PB2" labelx="-16" boardRot="-1e+06" circPos="0,0"/>
+
+Unique  Id: Connector-47: 
+Circuit Id: Connector-47
+<item mainComp="false" labely="-24" id="Connector-47" valLabRot="0" x="-160" itemtype="Connector" rotation="0" boardPos="-1e+06,-1e+06" y="-160" objectName="Connector-47" valLabelx="0" endpinid="Pcd8544-23-PinDc" Show_id="false" labelrot="0" pointList="-160,-160,40,-160,40,-180" enodeid="Circ_eNode-180" vflip="1" valLabely="0" circRot="0" hflip="1" startpinid="atmega328-8-PB3" labelx="-16" boardRot="-1e+06" circPos="0,0"/>
+
+Unique  Id: Connector-48: 
+Circuit Id: Connector-48
+<item mainComp="false" labely="-24" id="Connector-48" valLabRot="0" x="-160" itemtype="Connector" rotation="0" boardPos="-1e+06,-1e+06" y="-168" objectName="Connector-48" valLabelx="0" endpinid="Pcd8544-23-PinSi" Show_id="false" labelrot="0" pointList="-160,-168,56,-168,56,-180" enodeid="Circ_eNode-181" vflip="1" valLabely="0" circRot="5.21501779650294e-310" hflip="1" startpinid="atmega328-8-PB4" labelx="-16" boardRot="-1e+06" circPos="0,0"/>
+
+Unique  Id: Connector-49: 
+Circuit Id: Connector-49
+<item mainComp="false" labely="-24" id="Connector-49" valLabRot="0" x="-160" itemtype="Connector" rotation="0" boardPos="-1e+06,-1e+06" y="-176" objectName="Connector-49" valLabelx="0" endpinid="Pcd8544-23-PinScl" Show_id="false" labelrot="0" pointList="-160,-176,72,-176,72,-180" enodeid="Circ_eNode-182" vflip="1" valLabely="0" circRot="1.2906182122504511e-306" hflip="1" startpinid="atmega328-8-PB5" labelx="-16" boardRot="-1e+06" circPos="0,0"/>
+
+Unique  Id: Connector-117: 
+Circuit Id: Connector-117
+<item mainComp="false" labely="-24" id="Connector-117" valLabRot="0" x="-140" itemtype="Connector" rotation="0" boardPos="-1e+06,-1e+06" y="-280" objectName="Connector-117" valLabelx="0" endpinid="atmega328-8-PC3" Show_id="false" labelrot="0" pointList="-140,-280,-140,-232,-160,-232" enodeid="Circ_eNode-183" vflip="1" valLabely="0" circRot="0" hflip="1" startpinid="KeyPad-52-Pin1" labelx="-16" boardRot="-1e+06" circPos="0,0"/>
+
+Unique  Id: Connector-148: 
+Circuit Id: Connector-148
+<item mainComp="false" labely="-24" id="Connector-148" valLabRot="0" x="-248" itemtype="Connector" rotation="0" boardPos="-1e+06,-1e+06" y="-236" objectName="Connector-148" valLabelx="0" endpinid="atmega328-8-PD0" Show_id="false" labelrot="0" pointList="-248,-236,-208,-236,-208,-240" enodeid="Circ_eNode-184" vflip="1" valLabely="0" circRot="-2.9141232064061607e-272" hflip="1" startpinid="KeyPad-97-Pin0" labelx="-16" boardRot="-1e+06" circPos="0,0"/>
+
+Unique  Id: Connector-149: 
+Circuit Id: Connector-149
+<item mainComp="false" labely="-24" id="Connector-149" valLabRot="0" x="-248" itemtype="Connector" rotation="0" boardPos="-1e+06,-1e+06" y="-220" objectName="Connector-149" valLabelx="0" endpinid="atmega328-8-PD1" Show_id="false" labelrot="0" pointList="-248,-220,-244,-220,-244,-232,-208,-232" enodeid="Circ_eNode-185" vflip="1" valLabely="0" circRot="0" hflip="1" startpinid="KeyPad-97-Pin1" labelx="-16" boardRot="-1e+06" circPos="0,0"/>
+
+Unique  Id: Connector-150: 
+Circuit Id: Connector-150
+<item mainComp="false" labely="-24" id="Connector-150" valLabRot="0" x="-248" itemtype="Connector" rotation="0" boardPos="-1e+06,-1e+06" y="-204" objectName="Connector-150" valLabelx="0" endpinid="atmega328-8-PD2" Show_id="false" labelrot="0" pointList="-248,-204,-248,-212,-236,-212,-236,-224,-208,-224" enodeid="Circ_eNode-186" vflip="1" valLabely="0" circRot="2.086036450712509e-308" hflip="1" startpinid="KeyPad-97-Pin2" labelx="-16" boardRot="-1e+06" circPos="0,0"/>
+
+Unique  Id: Connector-176: 
+Circuit Id: Connector-176
+<item mainComp="false" labely="-24" id="Connector-176" valLabRot="0" x="-108" itemtype="Connector" rotation="0" boardPos="-1e+06,-1e+06" y="-288" objectName="Connector-176" valLabelx="0" endpinid="KeyPad-52-Pin0" Show_id="false" labelrot="0" pointList="-108,-288,-108,-296,-124,-296" enodeid="Circ_eNode-187" vflip="1" valLabely="0" circRot="-5.486129297296288e+303" hflip="1" startpinid="Ground-175-Gnd" labelx="-16" boardRot="-1e+06" circPos="0,0"/>
+
+Unique  Id: Connector-178: 
+Circuit Id: Connector-178
+<item mainComp="false" labely="-24" id="Connector-178" valLabRot="0" x="-264" itemtype="Connector" rotation="0" boardPos="-1e+06,-1e+06" y="-164" objectName="Connector-178" valLabelx="0" endpinid="KeyPad-97-Pin3" Show_id="false" labelrot="0" pointList="-264,-164,-264,-188" enodeid="Circ_eNode-188" vflip="1" valLabely="0" circRot="nan" hflip="1" startpinid="Ground-177-Gnd" labelx="-16" boardRot="-1e+06" circPos="0,0"/>
+ 
+</circuit>
